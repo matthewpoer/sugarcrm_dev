@@ -1795,7 +1795,7 @@ sugarListView.prototype.use_external_mail_client = function(no_record_txt, modul
 	}
 
     if (document.MassUpdate.select_entire_list.value == 1) {
-		if (totalCount > 10) {
+		if (totalCount > 50) {
 			alert(totalCountError);
 			return;
 		} // if
@@ -1842,7 +1842,7 @@ sugarListView.prototype.use_external_mail_client_callback = function(o)
 
 sugarListView.prototype.send_form_for_emails = function(select, currentModule, action, no_record_txt,action_module,totalCount, totalCountError) {
 	if (document.MassUpdate.select_entire_list.value == 1) {
-		if (totalCount > 10) {
+		if (totalCount > 50) {
 			alert(totalCountError);
 			return;
 		} // if
@@ -1884,7 +1884,7 @@ sugarListView.prototype.send_form_for_emails = function(select, currentModule, a
 	}
 
 	var selectedArray = uidTa.value.split(",");
-	if(selectedArray.length > 10) {
+	if(selectedArray.length > 50) {
 		alert(totalCountError);
 		return;
 	} // if
