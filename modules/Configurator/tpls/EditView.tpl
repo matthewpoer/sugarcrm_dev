@@ -152,6 +152,17 @@
         <td  width='35%'>
             <div id="container_upload"></div>
             <input type='text' id='company_logo' name='company_logo' style="display:none">
+        </td>
+        <td scope="row" width='12%' nowrap>
+            {$MOD.LIST_VIEW_SELECT_TO_EMAIL}&nbsp;{sugar_help text=$MOD.LIST_VIEW_SELECT_TO_EMAIL_HELP}
+        </td>
+        <td width='35%'>
+            {if isset($config.list_view_action_email_max_records)}
+                <input type='text' id='list_view_action_email_max_records' name='list_view_action_email_max_records' value='{$config.list_view_action_email_max_records}'>
+            {else}
+                <input type='text' id='list_view_action_email_max_records' name='list_view_action_email_max_records' value='10'>
+            {/if}
+        </td>
     </tr>
 </table>
 

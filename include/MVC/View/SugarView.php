@@ -714,6 +714,7 @@ EOHTML;
             if ( isset($sugar_config['quicksearch_querydelay']) ) {
                 echo "<script>SUGAR.config.quicksearch_querydelay = {$GLOBALS['sugar_config']['quicksearch_querydelay']};</script>";
             }
+			echo ( isset($sugar_config['list_view_action_email_max_records']) ) ? ("<script>SUGAR.config.list_view_action_email_max_records = {$GLOBALS['sugar_config']['list_view_action_email_max_records']};</script>") : ("<script>SUGAR.config.list_view_action_email_max_records = 10;</script>");
             // cn: bug 12274 - prepare secret guid for asynchronous calls
             if (!isset($_SESSION['asynchronous_key']) || empty($_SESSION['asynchronous_key'])) {
                 $_SESSION['asynchronous_key'] = create_guid();

@@ -1691,6 +1691,7 @@ $app_strings = array (
     'LBL_LISTVIEW_NO_SELECTED' => 'Please select at least 1 record to proceed.',
     'LBL_LISTVIEW_TWO_REQUIRED' => 'Please select at least 2 records to proceed.',
     'LBL_LISTVIEW_LESS_THAN_TEN_SELECT' => 'Please select less than 10 records to proceed.',
+	'LBL_LISTVIEW_SELECTED_TOO_MANY' => 'You have selected too many records to email at once. Please select fewer than ',
     'LBL_LISTVIEW_ALL' => 'All',
     'LBL_LISTVIEW_NONE' => 'Deselect All',
     'LBL_LISTVIEW_OPTION_CURRENT' => 'Select This Page',
