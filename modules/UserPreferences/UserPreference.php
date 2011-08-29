@@ -67,6 +67,7 @@ class UserPreference extends SugarBean
     public $field_defs = array();
     public $field_defs_map = array();
     public $new_schema = true;
+    public $tracker_visibility = false; // should help with bug #46385
 
     protected $_userFocus;
 
