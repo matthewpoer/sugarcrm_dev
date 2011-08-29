@@ -200,6 +200,14 @@ public function save() {
 public function saveMonitor($monitor, $flush=true, $ignoreDisabled = false) {
 	
 	if(!$this->isPaused() && !empty($monitor)){
+        /* The next two lines are intended to prevent ill-conceived tracker entries
+         * from being visible in the Bread-Crumb (i.e. the "Last Viewed" bar)
+         * This addresses Bug #46385
+         * If this keeps a particular module from entering the Tracker, then that module ought to
+         * override the SugarBean::get_summary_text method to utilize a more proper item_summary text.
+        */
+        if (isset($monitor->item_summary) && $monitor->item_summary == 'Base Implementation.  Should be overridden.')
+            $monitor->setValue('visible',0);
 		
 		if((empty($this->disabledMonitors[$monitor->name]) || $ignoreDisabled) && array_key_exists('Trackable', class_implements($monitor))) {	
 			   
